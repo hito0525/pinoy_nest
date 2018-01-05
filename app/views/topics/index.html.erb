@@ -9,13 +9,15 @@
   </ul>
 </header>
 
+<% topics =  ["投稿一覧ページ作成中！",
+"Railsでpinoy nest作るよ" ] %>
+
 <div class="main topics-index">
   <div class="container">
+  <% topics.each do |topic| %>
     <div class="topics-index-item">
-      Railsでpinoy nest作るよ
-    </div>
-    <div class="topics-index-item">
-      投稿一覧ページ作成中！
-    </div>
+     <%= topic %>
+     </div>
+     <% end %>
   </div>
 </div>
