@@ -12,14 +12,14 @@
 <div class="main topics-index">
   <div class="container">
   <p><%= notice %></p>
-  <h1>Listen My Topics！!!</h1>
+  <h1>Listen My Topics!!!</h1>
   <h2><%= link_to "write your Topic" ,new_topic_path %></h2>
   <% @topics.each do |topic| %>
     <div class="topics-index-item">
       <p><%= topic.title%></p>
       <p><%= simple_format (topic.content)%></p>
       <p><%= link_to "Edit My Topic",edit_topic_path(topic.id) %></p>
-      <%= link_to "Delete this Topic",topic_path(topic.id),method: :delete %>
+      <%= link_to "Delete this Topic",topic_path(topic.id),method: :delete, data:{confirm:'are you sure to delete this Topic?'} %>
      </div>
      <% end %>
   </div>
