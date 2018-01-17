@@ -22,6 +22,12 @@ class TopicsController < ApplicationController
     redirect_to topics_path
   end
 
+  def destroy
+    @topic = Topic.find(params[:id])
+    @topic.destroy
+  end
+
+
 
 private
   def topic_params
