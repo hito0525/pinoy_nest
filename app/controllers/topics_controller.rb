@@ -19,12 +19,13 @@ class TopicsController < ApplicationController
   def update
     @topic = Topic.find(params[:id])
     @topic.update(topic_params)
-    redirect_to topics_path
+    redirect_to topics_path,notice: "Successfully edited your Topic💌"
   end
 
   def destroy
     @topic = Topic.find(params[:id])
     @topic.destroy
+    redirect_to topics_path, notice: "Deleted your Topic"
   end
 
 
