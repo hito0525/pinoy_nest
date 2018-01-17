@@ -1,5 +1,5 @@
 Rails.application.routes.draw do
-  resources :topics
+  resources :topics, only:[:index,:new,:create,:edit,:update, :destroy]
   # get 'topics/index'
 
    get "/" => "topics#index"
