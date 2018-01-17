@@ -9,7 +9,7 @@ class TopicsController < ApplicationController
 
   def create
     Topic.create(topic_params)
-    redirect_to topics_path
+    redirect_to topics_path,notice:"Successfully Posted your Topic"
   end
 
   def edit

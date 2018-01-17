@@ -11,6 +11,7 @@
 
 <div class="main topics-index">
   <div class="container">
+  <p><%= notice %></p>
   <h1>Listen My Topics！!!</h1>
   <h2><%= link_to "write your Topic" ,new_topic_path %></h2>
   <% @topics.each do |topic| %>
