@@ -11,12 +11,13 @@
 
 <div class="main topics-index">
   <div class="container">
-  <h1>Listen My Topic！!!</h1>
-  <h2><%= link_to "write your topic" ,new_topic_path %></h2>
+  <h1>Listen My Topics！!!</h1>
+  <h2><%= link_to "write your Topic" ,new_topic_path %></h2>
   <% @topics.each do |topic| %>
     <div class="topics-index-item">
       <p><%= topic.title%></p>
       <p><%= simple_format (topic.content)%></p>
+      <%= link_to "Edit My Topic",edit_topic_path(topic.id) %>
      </div>
      <% end %>
   </div>
