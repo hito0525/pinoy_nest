@@ -9,8 +9,13 @@ class TopicsController < ApplicationController
   end
 
   def create
-    Topic.create(topic_params)
-    redirect_to topics_path,notice:"Successfully Posted your Topic"
+    @topic = Topic.new(topic_params)
+    if @topic.save
+    # Topic.create(topic_params)
+    redirect_to topics_path,notice:"Successfully Posted your Topic💌"
+    else
+      render :new
+    end
   end
 
   def edit
@@ -28,8 +33,6 @@ class TopicsController < ApplicationController
     @topic.destroy
     redirect_to topics_path, notice: "Deleted your Topic"
   end
-
-
 
 private
   def topic_params
