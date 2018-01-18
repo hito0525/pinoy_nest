@@ -2,15 +2,15 @@
   <div class="container">
     <%= form_for(@topic) do |f| %>
       <% if @topic.errors.any? %>
-      <div id="error_explanation">
-       <h2><%= @topic.errors.count %>件のエラーがあります</h2>
-          <ul>
-            <% @topic.errors.full_messages.each do |msg| %>
-            <li><%= msg %></li>
-            <% end %>
-          </ul>
-      </div>
-    <% end %>
+        <div id="errors_explanation">
+          <h2><%= @topic.errors.count %>blank.Please fill up all</h2>
+            <ul>
+              <% @topic.errors.full_messages.each do |msg| %>
+              <li><%= msg %></li>
+              <% end %>
+            </ul>
+        </div>
+      <% end %>
 
   <div class="topics-index-item">
     <%= f.label :title %>

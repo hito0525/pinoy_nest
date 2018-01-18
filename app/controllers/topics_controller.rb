@@ -24,8 +24,11 @@ class TopicsController < ApplicationController
 
   def update
     @topic = Topic.find(params[:id])
-    @topic.update(topic_params)
+    if @topic.update(topic_params)
     redirect_to topics_path,notice: "Successfully edited your Topic💌"
+    else
+      render :edit
+    end
   end
 
   def destroy
