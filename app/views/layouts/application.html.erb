@@ -6,6 +6,13 @@
 
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+    <div class="header-logo">
+    <a href="/">Pinoy Nest</a>
+  </div>
+  <ul class="header-menus">
+    <li><%= link_to "What is Pinoy Nest",topics_path %></li>
+    <li><%= link_to "Contact us",new_contact_path %></li>
+  </ul>
   </head>
 
   <body>
